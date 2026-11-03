@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', 'Inter', system-ui, sans-serif;
+
+  --color-agri-dark: #092014;
+  --color-agri-deep: #0f3822;
+  --color-agri-forest: #1b4332;
+  --color-agri-primary: #2d6a4f;
+  --color-agri-fresh: #40916c;
+  --color-agri-bright: #52b788;
+  --color-agri-light: #74c69d;
+  --color-agri-soft: #95d5b2;
+  --color-agri-mint: #d8f3dc;
+
+  --color-bg-light: #f8faf6;
+  --color-bg-card: #ffffff;
+  --color-text-main: #14211a;
+  --color-text-muted: #4b6354;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8faf6;
+  color: var(--color-text-main);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Glassmorphism utility classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 106, 79, 0.12);
+}
+
+.glass-card-dark {
+  background: rgba(15, 56, 34, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(82, 183, 136, 0.25);
+  color: #ffffff;
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 25px rgba(82, 183, 136, 0.25);
+}
+
+.glow-green-sm {
+  box-shadow: 0 0 12px rgba(82, 183, 136, 0.2);
+}
+
+/* Animated subtle background gradient */
+.animated-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(45, 106, 79, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(45, 106, 79, 0.05) 1px, transparent 1px);
+}
+
+.dark-grid-bg {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(82, 183, 136, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(82, 183, 136, 0.06) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #edf2ea;
+}
+::-webkit-scrollbar-thumb {
+  background: #40916c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d6a4f;
+}
+
+/* Pulse badge animation */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.pulse-badge {
+  animation: pulse-ring 3s infinite ease-in-out;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agridyne.org/sitemap.xml
